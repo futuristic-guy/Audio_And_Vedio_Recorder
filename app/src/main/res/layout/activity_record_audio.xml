@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecordAudio">
+
+    <ImageButton
+        android:id="@+id/startRecord"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="60dp"
+        android:onClick="iWasClicked"
+        app:layout_constraintEnd_toStartOf="@+id/pauseRecord"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/record" />
+
+    <ImageButton
+        android:id="@+id/pauseRecord"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:onClick="iWasClicked"
+
+        app:layout_constraintBottom_toBottomOf="@+id/startRecord"
+        app:layout_constraintEnd_toStartOf="@+id/resumeRecord"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/startRecord"
+        app:srcCompat="@drawable/pause" />
+
+    <ImageButton
+        android:id="@+id/resumeRecord"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:onClick="iWasClicked"
+
+        app:layout_constraintBottom_toBottomOf="@+id/pauseRecord"
+        app:layout_constraintEnd_toStartOf="@+id/overRecord"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/pauseRecord"
+        app:srcCompat="@drawable/resume" />
+
+    <ImageButton
+        android:id="@+id/overRecord"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:onClick="iWasClicked"
+
+        app:layout_constraintBottom_toBottomOf="@+id/resumeRecord"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/resumeRecord"
+        app:srcCompat="@drawable/over" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginBottom="24dp"
+        android:text=""
+        android:textColor="#1C8D73"
+        android:gravity="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/playRaudio"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pauseRecord" />
+
+    <Button
+        android:id="@+id/playRaudio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Play Recorded Audio"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/pauseRecord"
+        app:layout_constraintVertical_bias="0.72" />
+</androidx.constraintlayout.widget.ConstraintLayout>
