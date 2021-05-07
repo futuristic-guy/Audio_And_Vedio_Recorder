@@ -4,7 +4,7 @@
 
 
 <h4>Functionality : </h4>
-<p>User can record audio , while recording can pause and resume the vedio. After Recording is Completed can play the Recorded Audio.
+<p>User can record audio , while recording can pause and resume the audio. After Recording is Completed, User can play the Recorded Audio.
 User can Record the Video and Can play it.
 </p>
 
